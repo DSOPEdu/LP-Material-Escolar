@@ -74,60 +74,61 @@ function Formulario({ onCalcular, dadosIniciais, utmParams }) {
   const closeModal = () => setShowModal(false);
 
   return (
-    <section className="py-8 bg-base-200">
-      <div className="container mx-auto px-4 text-center max-w-md">
-        <h2 className="text-2xl font-bold text-primary mb-4" id="questionario">
+    <section className="py-8 px-6 h-[26.25rem] bg-azul-100">
+      <div className="container relative z-10 mx-auto px-6 py-8 text-center max-w-2xl bg-azul-50 rounded-2xl">
+        <h2 className="text-2xl font-bold text-white mb-6" id="questionario">
           Preencha os dados do valor do material escolar
         </h2>
         <form className="space-y-4 w-full">
-          <label className="form-control w-full">
-            <span className="label-text">Valor do material escolar (R$)</span>
+          <label className="form-control items-center w-full">
+            <p className="label-text text-white mb-2 text-base">Valor do material escolar (R$)</p>
             <input
               type="text"
               value={valorMatEsc}
               onChange={(e) => handleNumericInput(e, setvalorMatEsc, 'valorMatEsc')}
-              className="input input-bordered w-full"
+              className="input input-bordered max-w-md w-full"
               min="100"
               required
             />
           </label>
-          <label className="form-control w-full">
-            <span className="label-text">Desconto em % da compra à vista</span>
+          <label className="form-control items-center w-full">
+            <p className="label-text text-white mb-2 text-base">Desconto em % da compra à vista</p>
             <input
               type="text"
               value={descontoVista}
               onChange={(e) => handleNumericInput(e, setDescontoVista, 'descontoVista')}
-              className="input input-bordered w-full"
+              className="input input-bordered max-w-md w-full"
               min="0.1"
               max="99.0"
               required
             />
           </label>
-          <label className="form-control w-full">
-            <span className="label-text">Juros Mensais em % de suas aplicações</span>
+          <label className="form-control items-center w-full">
+            <p className="label-text text-white mb-2 text-base">Juros Mensais em % de suas aplicações</p>
             <input
               type="text"
               value={jurosMensal}
               onChange={(e) => handleNumericInput(e, setJurosMensal, 'jurosMensal')}
-              className="input input-bordered w-full"
+              className="input input-bordered max-w-md w-full"
               min="0.1"
               max="99.0"
               required
             />
           </label>
-          <label className="form-control w-full">
-            <span className="label-text">Quantidade de parcelas</span>
+          <label className="form-control items-center w-full">
+            <p className="label-text text-white mb-2 text-base">Quantidade de parcelas</p>
             <input
               type="number"
               value={parcelas}
               onChange={handleParcelasChange}
-              className="input input-bordered w-full"
+              className="input input-bordered max-w-md w-full"
               required
               min="2"
               max="100"
             />
           </label>
           <ReCAPTCHA
+            className='flex justify-center'
             sitekey={import.meta.env.VITE_APP_SITE_KEY}
             onChange={(value) => setHasRecaptcha(value)}
           />
@@ -135,13 +136,13 @@ function Formulario({ onCalcular, dadosIniciais, utmParams }) {
             ? (<button
               type="button"
               onClick={openModal}
-              className="btn btn-secondary w-full mt-4"
+              className="bg-azul-100 w-fit mt-4 py-3 px-8 rounded-lg font-medium text-white"
             >
             Realizar Simulação
             </button>) 
             : (<button
               type="button"
-              className="btn btn-secondary w-full mt-4 cursor-not-allowed"
+              className="bg-gray-50/25 w-fit mt-4 py-3 px-8 rounded-lg font-medium cursor-not-allowed"
               disabled={true}
             >
             Realizar Simulação

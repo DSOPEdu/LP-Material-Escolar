@@ -13,7 +13,9 @@ export default {
         neutral: '#A2AAAD', // Cinza Neutro
         base: '#ffffff', // Fundo principal
         "gray-50": "#C1C1C1",
-        "orange-50": "#FFEFEB"
+        "orange-50": "#FFEFEB",
+        "azul-50": "#6667AB",
+        "azul-100": "#2D2978" 
       },
       fontFamily: {
         primary: ['Myriad MM', 'Tahoma', 'sans-serif'],
@@ -42,6 +44,8 @@ export default {
           "error": "#F87272",
           "gray-50": "#C1C1C1",
           "orange-50": "#FFEFEB",
+          "azul-50": "#6667AB",
+          "azul-100": "#2D2978"
         },
       },
       "dark",    // Tema escuro padrão do daisyUI
