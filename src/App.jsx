@@ -103,7 +103,7 @@ function App() {
       {mostrarResultado && dados && <Resultado dados={dados} />}
       <Ofertas />
       <EntendaMais />
-      <Rodape />
+      {/* <Rodape /> */}
     </>
   );
 }
