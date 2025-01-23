@@ -74,7 +74,7 @@ function Formulario({ onCalcular, dadosIniciais, utmParams }) {
   const closeModal = () => setShowModal(false);
 
   return (
-    <section className="py-8 px-6 h-[26.25rem] bg-azul-100">
+    <section className="py-24 px-6 h-[26.25rem] bg-azul-100">
       <div className="container relative z-10 mx-auto px-6 py-8 text-center max-w-2xl bg-azul-50 rounded-2xl">
         <h2 className="text-2xl font-bold text-white mb-6" id="questionario">
           Preencha os dados do valor do material escolar

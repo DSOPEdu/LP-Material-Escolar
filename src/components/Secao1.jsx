@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import logo from '../assets/img/logo.png'; // Substitua pelo caminho correto do logo
-// import backgroundImage from '../assets/img/lapis.svg'; // Substitua pelo caminho correto da imagem de fundo
+import backgroundImage from '../assets/img/Lapis.svg'; // Substitua pelo caminho correto da imagem de fundo
 import imgmenina from '../assets/img/menina.png'
 
 function Secao1() {
@@ -33,16 +33,14 @@ const scrollToSection = (sectionId) => {
 
   return (
     <section
-      className="relative pt-8 px-6 bg-cover bg-center text-white"
-      // style={{ backgroundImage: `url(${backgroundImage})` }}
+      className="relative pt-8 px-6 bg-cover bg-bottom bg-no-repeat  text-white"
+      style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: "100%" }}
     >
-      {/* Overlay para melhorar a legibilidade 
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>*/}
-      <div className='flex justify-center items-center gap-8' >
+      <div className='flex justify-center gap-8' >
         <div className='hidden lg:block'> 
           <img width="648" heigth="816" src={imgmenina}  />
         </div>
-        <div className='mb-8 '>
+        <div className='mb-28 lg:mb-12 mt-9 '>
           <h1 className='text-black text-4xl sm:text-5xl leading-snug sm:leading-tight font-bold mb-5 max-w-md'>Simulador de Comparativo para Material Escolar</h1> 
           <p className='text-[#6667ab] text-xl sm:text-2xl mb-10 sm:mb-14 max-w-md'>Insira os dados necessários e veja os resultados detalhados do cálculo.</p> 
            {/* Botões Informativos */}
