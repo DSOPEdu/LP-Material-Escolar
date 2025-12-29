@@ -65,7 +65,7 @@ function Navigation({baseUrl}){
                         </li>
                       </ul>
                     </div>
-          
+
                     <div className="w-40 mt-0 md:-mt-11">
                       <h2 className="mb-4 pl-3 text-primary text-xl font-bold">Conteúdo</h2>
                       <ul className="before:hidden m-0 p-0 flex gap-1 flex-col">
@@ -101,7 +101,7 @@ function Navigation({baseUrl}){
                         </li>
                       </ul>
                     </div>
-          
+
                     <div className="w-40 md:w-52 mt-0 md:-mt-11">
                       <h2 className="mb-4 pl-3 text-primary text-xl font-bold">Pessoal</h2>
                       <ul className="before:hidden m-0 p-0 flex gap-1 flex-col">
@@ -152,8 +152,8 @@ function Navigation({baseUrl}){
                   <div className="w-40 md:w-80 flex h-0 relative -top-28">
                     <ul className="before:hidden m-0 mt-1.5 p-0 flex gap-2 flex-col">
                       <li>
-                        <a href={`${baseUrl}/in-company`} className="px-3 hover:bg-orange-50 hover:text-primary text-gray-50 text-base font-medium">
-                          In Company
+                        <a href={`${baseUrl}/vertice`} className="px-3 hover:bg-orange-50 hover:text-primary text-gray-50 text-base font-medium">
+                          Vértice
                         </a>
                       </li>
                       <li>

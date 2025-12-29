@@ -22,7 +22,7 @@ function ModalForm({ onClose, onCalcular, dadosIniciais, utmParams }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Evita comportamento padrão do formulário
-  
+
     if (nome && email && cidade && estado) {
       // Armazena os dados no localStorage
       localStorage.setItem('form_nome', nome);
@@ -30,9 +30,11 @@ function ModalForm({ onClose, onCalcular, dadosIniciais, utmParams }) {
       localStorage.setItem('form_cidade', cidade);
       localStorage.setItem('form_estado', estado);
       localStorage.setItem('showresult', 'sim');
-  
+
       onCalcular(); // Chama a função para processar os dados
-  
+      const currentYear = new Date().getFullYear();
+
+
       // Dados para envio via POST
       const formData = {
         nome,
@@ -41,7 +43,7 @@ function ModalForm({ onClose, onCalcular, dadosIniciais, utmParams }) {
         estado,
         utm_source: utmParams.utm_source || 'site-dsop',
         utm_medium: "simulador", // ou outro valor apropriado
-        utm_campaign: "material-escolar-2025",
+        utm_campaign: `material-escolar-${currentYear}`,
         utm_content: "simulador-formulario",
         utm_term: "simuladores",
         last_pag: "dsop",
@@ -49,7 +51,7 @@ function ModalForm({ onClose, onCalcular, dadosIniciais, utmParams }) {
         responsavel_pelo_lead: utmParams.responsavel_pelo_lead || 'kaue.ferreira',
         conversion: "material-escolar-simulador"
       };
-  
+
       try {
         // Executa o POST
         const response = await sendFormDataToServer(formData);
@@ -58,14 +60,14 @@ function ModalForm({ onClose, onCalcular, dadosIniciais, utmParams }) {
         console.error("Erro ao enviar os dados:", error);
         alert("Erro ao enviar os dados. Consulte o console para mais informações.");
       }
-  
+
       // Recarrega a página para atualizar o formulário
       window.location.reload();
     } else {
       alert('Por favor, preencha todos os campos!');
     }
   };
-  
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div className="bg-white rounded-lg shadow-lg p-6 w-96 z-50">
