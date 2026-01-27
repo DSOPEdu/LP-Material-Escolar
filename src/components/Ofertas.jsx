@@ -31,26 +31,6 @@ function Ofertas() {
         Comece agora com 7 dias grátis
       </a>
     </div>
-
-    {/* Oferta Dinbora+ */}
-    <div>
-      <p className='text-[#000000] text-xl mb-4 max-w-lg font-semibold'>
-        📱 50% de desconto na assinatura do Dinbora+<br />
-        <span className="text-base font-normal block my-1">
-          Controle financeiro simples, personalizado e na palma da mão.
-        </span>
-        Use o cupom: BENEFICIO
-      </p>
-      {/* Botão Dinbora+ */}
-      <a
-        href="https://plus.dinbora.com.br/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded-lg text-sm md:text-lg text-white px-4 py-2 w-full md:w-auto bg-[#2d2978] font-semibold inline-block text-center"
-      >
-        Acesse e garanta 50% OFF
-      </a>
-    </div>
   </div>
 </section>
   );
